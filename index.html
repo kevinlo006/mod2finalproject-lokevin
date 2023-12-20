@@ -1,0 +1,88 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+	<meta charset="UTF-8"> 
+	<meta name="viewport"
+		content="width=device-width, 
+				initial-scale=1.0"> 
+	<link rel="stylesheet" href="styles.css"> 
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<title>Battler</title> 
+</head> 
+<body> 
+	<section class="game"> 
+		<!--title-->
+		<div class="title">RPSLS</div> 
+		
+		<!--score display-->
+		<div class="score"> 
+			<div class="playerScore"> 
+				<h2>Player Score:</h2> 
+				<p class="p-count count"></p> 
+
+			</div>	 
+			<div class="computerScore"> 
+				<h2>Computer Score:</h2> 
+				<p class="c-count count"></p> 
+
+			</div> 
+		</div> 
+		<!--display results-->
+		<div class="result"></div> 
+
+		<div class="move">Choose your move</div> 
+		
+		<!--Number of moves left before game ends -->
+		<div class="movesleft">Moves Left: 5 </div> 
+		
+		<!--Options available to player to play game -->
+		<div class="options"> 
+			<button class="rock"data-option="rock">Rock</button> 
+			<button class="paper"data-option="paper">Paper</button> 
+			<button class="scissor"data-option="scissors">Scissors</button>
+            <button class="lizard"data-option="lizard">Lizard</button>
+            <button class="spock"data-option="spock">Spock</button>	 
+		</div> 
+		
+<!-- Button trigger modal -->
+<button class="rules" data-bs-toggle="modal" data-bs-target="#exampleModal">
+	Rules
+</button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h1 class="modal-title fs-5" id="exampleModalLabel">Rules</h1>
+		  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body">
+			<li>Scissors cuts Paper</li>
+			<li>Paper covers Rock</li>
+			<li>Rock crushes Lizard</li>
+			<li>Lizard poisons Spock</li>
+			<li>Spock smashes Scissors</li>
+			<li>Scissors decapitates Lizard</li>
+			<li>Lizard eats Paper</li>
+			<li>Paper disproves Spock</li>
+			<li>Spock vaporizes Rock</li>
+			<li>Rock crushes Scissors</li>
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+		</div>
+	  </div>
+	</div>
+  </div>
+
+
+		<!--Reload the game -->
+		<button class="reload"></button> 
+
+	</section> 
+
+	<script src="script.js"></script> 
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body> 
+</html>

@@ -1,0 +1,154 @@
+*{ 
+	padding: 0; 
+	margin: 0; 
+	box-sizing: border-box; 
+	background: #000000; 
+	color: #fff; 
+} 
+/*center game*/
+.game{ 
+	display: flex; 
+	flex-direction: column; 
+	height: 100vh; 
+	width: 100vw; 
+	justify-content: center; 
+	align-items: center; 
+} 
+
+/*title*/
+.title{ 
+	position: absolute;
+	top: 0; 
+	font-size: 4rem; 
+	z-index: 2; 
+} 
+
+/*score board*/
+.score{ 
+	display: flex; 
+	width: 100vw; 
+	justify-content: space-evenly; 
+	position: absolute; 
+	top: 70px; 
+	z-index: 1; 
+} 
+
+/*score card*/
+.p-count,.c-count{ 
+	text-align: center; 
+	font-size: 1.5rem; 
+	margin-top: 1rem; 
+} 
+
+/*buttons*/
+.options{ 
+	display: flex; 
+	width: 50vw; 
+	justify-content: space-evenly; 
+	margin-top: 2rem; 
+} 
+
+/*choice styles*/
+.rock, .paper, .scissor, .lizard, .spock{ 
+	padding: 0.8rem; 
+	width: 100px; 
+	border-radius: 10px; 
+	background: rgb(104, 104, 104); 
+	outline: none; 
+	border-color: rgb(255, 255, 255); 
+	border: none; 
+	cursor: pointer; 
+} 
+
+/*moves*/
+.move{ 
+	font-size: 2rem; 
+	font-weight: bold; 
+} 
+
+/*reload button*/
+.reload { 
+	display: none; 
+	margin-top: 2rem; 
+	padding: 1rem; 
+	background: rgb(104, 104, 104); 
+	outline: none; 
+	border: none; 
+	border-radius: 10px; 
+	cursor: pointer; 
+} 
+
+
+.rules{
+	position:fixed;
+    bottom: 5%;
+    right:10%;
+	padding: 0.8rem; 
+	width: 100px; 
+	border-radius: 10px; 
+	background: rgb(104, 104, 104); 
+	outline: none; 
+	border-color: rgb(255, 255, 255); 
+	border: none; 
+	cursor: pointer;
+}
+
+/*result area*/
+.result{ 
+	margin-top: 5px; 
+	font-size: 2rem; 
+    display:flex;
+    justify-content: center;
+    padding-bottom: 100px;
+	
+} 
+
+/*responsive design*/
+@media screen and (max-width: 612px) 
+{ 
+	.title{ 
+		text-align: center; 
+	} 
+	.score{ 
+		position: absolute; 
+		top: 200px; 
+		width: 100vw; 
+	} 
+	.options{ 
+		width: 100vw; 
+	} 
+}
+
+/*button hover*/
+.rock:hover,
+.paper:hover,
+.scissor:hover,
+.lizard:hover,
+.spock:hover,
+.reload:hover{
+  animation: glowing 1s ease-in-out infinite alternate;
+}
+
+/*glowing effect*/
+@keyframes glowing {
+  from {
+    box-shadow: 0 0 10px #1100ff, 0 0 20px #ffffff, 0 0 30px #1100ff;
+  }
+  to {
+    box-shadow: 0 0 20px #ff0000, 0 0 30px #ffffff, 0 0 40px #ff0000;
+  }
+}
+
+.rules:hover{
+	animation: glow 1s ease-in-out infinite alternate;
+}
+	
+	@keyframes glow {
+		from {
+		box-shadow: 0 0 10px #00ff00, 0 0 20px #ffffff, 0 0 30px #00ff00;
+	  }
+	  to {
+		box-shadow: 0 0 20px #d9ff00, 0 0 30px #ffffff, 0 0 40px #d9ff00;
+	  }
+
+	}
